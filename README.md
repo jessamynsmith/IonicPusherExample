@@ -15,7 +15,7 @@ $ cd IonicPusherExample
 $ npm install
 ```
 
-1. Create a Pusher account (if you don't already have one) and follow the instructions to create a new app. Once you have the app key, edit pusher.service.ts to have the pusher app key. You may need to edit cluster, channel name, and event name, as well. 
+1. Create a Pusher account (if you don't already have one) and follow the instructions to create a new app. Once you have the app key, edit src/config.ts to have the pusher app key. You may need to edit cluster, channel name, and event name, as well.
 
 1. Run the app
 ```bash
