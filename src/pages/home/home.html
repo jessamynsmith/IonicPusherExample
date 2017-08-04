@@ -3,8 +3,8 @@
 
   <h5>Messages</h5>
 
-  <div *ngFor="let message of messages">
-      {{message.name}}: {{message.message}}
+  <div class="message" *ngFor="let message of messages">
+      <span class="sender">{{message.name}}</span>: {{message.message}}
   </div>
 
 </ion-content>
