@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { PusherService } from '../../app/pusher.service';
+import { PusherProvider } from '../../providers/pusher/pusher';
 
 @Component({
   selector: 'page-home',
@@ -9,11 +9,11 @@ import { PusherService } from '../../app/pusher.service';
 export class HomePage {
   messages: Array<{name: string, message: string}>;
 
-  constructor(public navCtrl: NavController, private pusherService: PusherService) {
+  constructor(public navCtrl: NavController, private pusher: PusherProvider) {
 
     this.messages = [];
 
-    pusherService.messagesChannel.bind(pusherService.eventName, (data) => {
+    pusher.messagesChannel.bind(pusher.config.eventName, (data) => {
       console.log(data.name, data.message);
       this.messages.push(data);
     });
