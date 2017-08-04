@@ -15,4 +15,11 @@
   </p>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
+
+  <h3>Messages</h3>
+
+  <div *ngFor="let message of messages">
+      {{message.name}}: {{message.message}}
+  </div>
+
 </ion-content>
