@@ -1,26 +1,25 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# IonicPusherExample
 
-## How to use this template
+Example of receiving push events from Pusher in an Ionic2 app
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+### Getting started
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
+1. Get project from GitHub
 ```bash
-$ sudo npm install -g ionic cordova
-$ ionic start mySideMenu sidemenu
+$ git clone https://github.com/jessamynsmith/IonicPusherExample.git
 ```
 
-Then, to run it, cd into `mySideMenu` and run:
-
+1. Install dependencies
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ cd IonicPusherExample
+$ npm install
 ```
 
-Substitute ios for android if not on a Mac.
+1. Create a Pusher account (if you don't already have one) and follow the instructions to create a new app. Once you have the app key, edit pusher.service.ts to have the pusher app key. You may need to edit cluster, channel name, and event name, as well. 
 
+1. Run the app
+```bash
+$ ionic serve
+```
+
+1. Send a notification from Pusher. You should see it in your app.

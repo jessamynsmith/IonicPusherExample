@@ -13,7 +13,7 @@ export class HomePage {
 
     this.messages = [];
 
-    pusherService.messagesChannel.bind('my-event', (data) => {
+    pusherService.messagesChannel.bind(pusherService.eventName, (data) => {
       console.log(data.name, data.message);
       this.messages.push(data);
     });
